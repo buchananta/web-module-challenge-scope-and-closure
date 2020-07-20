@@ -76,8 +76,7 @@ finalScore(inning, 9) might return:
 
 function finalScore(callback, innings){
   const result = {"Home": 0, "Away": 0,};
-  while (innings) {
-    innings--;
+  while (innings--) { //will blow up if given a negative number
     result.Home += callback();
     result.Away += callback();
   }
