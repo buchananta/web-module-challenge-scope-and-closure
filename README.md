@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+    Its a function defined inside of another function. Giving you access to the outer functions scope. Good way to limit access to variables that other parts of the program should not be messing with.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+    It is the anonymous function inside of the other function. I can tell, because it is defined inside the return statement of the personalDice function
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+    The name is always the same. The dice roll ${newRoll} will be assigned a new value every time dansRoll is invoked.
+c. What is the lexical scope of `newRoll`?
+    it's inside the closure, so its scoped inside of it, and the anonymous function is the only thing that can access it directly
 
 ### Task 2c - Exit Ticket
 
